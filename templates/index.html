@@ -1,0 +1,23 @@
+{% extends '__top_layout.html' %}
+
+{% block style %}
+  {{ super() }}
+{% endblock %}
+
+{% block body %}
+  {{ super() }}
+  <p>Here's everyone in the chatroom.</p>
+  <table>
+    <thead>
+      <th>Name</th>
+    </thead>
+    <tbody>
+      {% for name in names %}
+        <tr>
+          <td>{{ name }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <a href="/chat_room"><br>Go to generic chat room</a>
+{% endblock %}
