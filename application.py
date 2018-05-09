@@ -15,7 +15,7 @@ def index():
 def chat_room():
     return render_template("chat_room.html")
 
-
+# Runs the app
 if __name__ == "__main__":
     app.debug = True
     app.run()
